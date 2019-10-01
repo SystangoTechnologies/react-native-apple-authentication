@@ -1,3 +1,4 @@
+import React from 'react';
 import { NativeModules, requireNativeComponent ,Platform } from 'react-native';
 
 const { AppleAuthentication } = NativeModules;
