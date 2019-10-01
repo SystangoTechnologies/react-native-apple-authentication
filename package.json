@@ -1,16 +1,17 @@
 {
   "name": "react-native-apple-authentication",
   "title": "React Native Apple Authentication",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react-native native module for Apple Login",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\""
   },
+  "homepage": "https://github.com/SystangoTechnologies/react-native-apple-authentication/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-apple-authentication.git",
-    "baseUrl": "https://github.com/github_account/react-native-apple-authentication"
+    "url": "git+https://github.com/SystangoTechnologies/react-native-apple-authentication.git",
+    "baseUrl": "https://github.com/SystangoTechnologies/react-native-apple-authentication"
   },
   "keywords": [
     "react-native",
