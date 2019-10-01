@@ -7,10 +7,11 @@
   "scripts": {
     "test": "echo \"No test specified\""
   },
+  "homepage": "https://github.com/SystangoTechnologies/react-native-apple-authentication/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-apple-authentication.git",
-    "baseUrl": "https://github.com/github_account/react-native-apple-authentication"
+    "url": "git+https://github.com/SystangoTechnologies/react-native-apple-authentication.git",
+    "baseUrl": "https://github.com/SystangoTechnologies/react-native-apple-authentication"
   },
   "keywords": [
     "react-native",
