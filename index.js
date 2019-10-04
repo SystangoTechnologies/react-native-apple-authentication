@@ -9,8 +9,8 @@ export const SignInWithAppleButton = (buttonStyle, callBack) => {
   if(Platform.OS === 'ios'){
     return <RNSignInWithAppleButton style={buttonStyle} onPress={async () => {
     
-        await RNCAppleAuthentication.requestAsync({
-          scopes: [RNCAppleAuthentication.Scope.FULL_NAME, RNCAppleAuthentication.Scope.EMAIL],
+        await AppleAuthentication.requestAsync({
+          scopes: [AppleAuthentication.Scope.FULL_NAME, AppleAuthentication.Scope.EMAIL],
         }).then((response) => {
           callBack(response) //Display response
           }, (error) => {
