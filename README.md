@@ -66,5 +66,9 @@ const styles = StyleSheet.create({
   appleBtn: { height: 44, width: 200 }
 });
 ```
+#### LICENSE
+
+[MIT LICENSE](https://github.com/SystangoTechnologies/react-native-apple-authentication/blob/master/LICENSE)
+
 
 
