@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
 ```
 #### LICENSE
 
-[MIT LICENSE](https://github.com/SystangoTechnologies/react-native-apple-authentication/blob/master/LICENSE)
+[MIT](https://github.com/SystangoTechnologies/react-native-apple-authentication/blob/master/LICENSE)
 
 
 
