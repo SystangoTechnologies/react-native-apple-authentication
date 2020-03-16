@@ -79,8 +79,24 @@ RCT_EXPORT_METHOD(requestAsync:(NSDictionary *)options
 - (void)authorizationController:(ASAuthorizationController *)controller
    didCompleteWithAuthorization:(ASAuthorization *)authorization {
   ASAuthorizationAppleIDCredential* credential = authorization.credential;
+  NSMutableDictionary *fullName;
+  if ([credential valueForKey:@"fullName"] != nil) {
+    fullName = [[credential.fullName dictionaryWithValuesForKeys:@[
+        @"namePrefix",
+        @"givenName",
+        @"middleName",
+        @"familyName",
+        @"nameSuffix",
+        @"nickname",
+    ]] mutableCopy];
+    [fullName enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+      if (obj == nil) {
+        fullName[key] = [NSNull null];
+      }
+    }];
+  }
   NSDictionary* user = @{
-                         @"fullName": RCTNullIfNil(credential.fullName),
+                         @"fullName": RCTNullIfNil(fullName),
                          @"email": RCTNullIfNil(credential.email),
                          @"user": credential.user,
                          @"authorizedScopes": credential.authorizedScopes,
