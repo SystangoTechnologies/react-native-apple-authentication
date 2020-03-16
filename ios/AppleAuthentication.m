@@ -79,6 +79,20 @@ RCT_EXPORT_METHOD(requestAsync:(NSDictionary *)options
 - (void)authorizationController:(ASAuthorizationController *)controller
    didCompleteWithAuthorization:(ASAuthorization *)authorization {
   ASAuthorizationAppleIDCredential* credential = authorization.credential;
+  NSString *identityToken;
+  if ([credential valueForKey:@"identityToken"] != nil) {
+    identityToken = [
+        [NSString alloc] initWithData:[credential valueForKey:@"identityToken"] encoding:NSUTF8StringEncoding
+    ];
+  }
+
+  NSString *authorizationCode;
+  if ([credential valueForKey:@"authorizationCode"] != nil) {
+    authorizationCode = [
+        [NSString alloc] initWithData:[credential valueForKey:@"authorizationCode"] encoding:NSUTF8StringEncoding
+    ];
+  }
+
   NSMutableDictionary *fullName;
   if ([credential valueForKey:@"fullName"] != nil) {
     fullName = [[credential.fullName dictionaryWithValuesForKeys:@[
@@ -102,8 +116,8 @@ RCT_EXPORT_METHOD(requestAsync:(NSDictionary *)options
                          @"authorizedScopes": credential.authorizedScopes,
                          @"realUserStatus": @(credential.realUserStatus),
                          @"state": RCTNullIfNil(credential.state),
-                         @"authorizationCode": RCTNullIfNil(credential.authorizationCode),
-                         @"identityToken": RCTNullIfNil(credential.identityToken)
+                         @"authorizationCode": RCTNullIfNil(authorizationCode),
+                         @"identityToken": RCTNullIfNil(identityToken)
                          };
   _promiseResolve(user);
 }
