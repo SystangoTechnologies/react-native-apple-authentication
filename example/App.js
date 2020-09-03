@@ -11,11 +11,15 @@ import {StyleSheet, View} from 'react-native';
 
 import {SignInWithAppleButton} from 'react-native-apple-authentication';
 
+
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {SignInWithAppleButton(styles.appleBtn, this.appleSignIn)}
+        {SignInWithAppleButton({
+          buttonStyle: styles.appleBtn, 
+          callBack: this.appleSignIn,
+        })}
       </View>
     );
   }
@@ -29,7 +33,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
-  appleBtn: {height: 44, width: 200},
+  appleBtn: {
+    height: 44, 
+    width: 200,
+    borderRadius: 5, 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    backgroundColor: 'black'
+  },
 });

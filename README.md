@@ -36,6 +36,20 @@ From react-native version 0.60 we don't need to link any third party module sepa
 7. If you're creating a key for grouped app then create a key for your primary App ID in order to implement Sign In with Apple. This key will also be used for any App IDs grouped with the primary. The user will see your primary app's icon at sign in and in their Apple ID account settings.
 8. Test this on real iPhone device 
 
+## Props
+
+| Prop | #buttonText  | #buttonStyle  |  #textStyle  |
+| :---:   | :-: | :-: | :-: |
+| Value | Optional | Optional | Optional |
+
+
+## Functions
+
+| Function | #callBack  |
+| :---:   | :-: |
+| Value | Required |
+
+
 ## Usage
 ```javascript
 
