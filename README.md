@@ -41,9 +41,7 @@ From react-native version 0.60 we don't need to link any third party module sepa
 | Prop | Value  |
 | :---:   | :-: |
 | buttonText | Optional |
-| :---:   | :-: |
 | buttonStyle | Optional |
-| :---:   | :-: |
 | textStyle | Optional |
 
 
