@@ -1,7 +1,7 @@
 {
   "name": "react-native-apple-authentication",
   "title": "React Native Apple Authentication",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "react-native native module for Apple Login",
   "main": "index.js",
   "scripts": {
