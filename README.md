@@ -61,7 +61,10 @@ export default class App extends React.Component{
   render(){
     return(
     <View style = {styles.container}>
-     {SignInWithAppleButton(styles.appleBtn, this.appleSignIn)}
+     {SignInWithAppleButton({
+          buttonStyle: styles.appleBtn, 
+          callBack: this.appleSignIn,
+        })}
     </View>)
 
   }
