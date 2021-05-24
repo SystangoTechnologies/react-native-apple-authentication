@@ -19,7 +19,7 @@ export default class App extends React.Component {
         {SignInWithAppleButton({
           buttonStyle: styles.appleBtn, 
           callBack: this.appleSignIn,
-          buttonText: 'Apple login 2'
+          buttonText: 'Login with Apple '
         })}
       </View>
     );
