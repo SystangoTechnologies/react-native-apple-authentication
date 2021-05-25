@@ -64,6 +64,7 @@ export default class App extends React.Component{
      {SignInWithAppleButton({
           buttonStyle: styles.appleBtn, 
           callBack: this.appleSignIn,
+          buttonText: "Sign Up With Apple",
         })}
     </View>)
 
@@ -80,7 +81,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'white',
   },
   appleBtn: { height: 44, width: 200 }
 });
